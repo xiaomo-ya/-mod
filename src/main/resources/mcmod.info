@@ -1,0 +1,16 @@
+[{
+    "modid": "autosprint",
+    "name": "Auto Sprint",
+    "description": "\u81ea\u52a8\u75be\u8dd1\uff1a\u53ea\u8981\u6309\u4f4f\u524d\u8fdb\u952e\u5c31\u81ea\u52a8\u8fdb\u5165\u75be\u8dd1\u72b6\u6001\uff0c\u4e0d\u7528\u53cc\u51fb W\uff0c\u4e5f\u4e0d\u7528\u4e00\u76f4\u6309\u7740\u75be\u8dd1\u952e\u3002\u9ed8\u8ba4\u6309 R \u952e\u5f00\u5173\u3002\nAuto Sprint: hold forward to sprint automatically. Press R in game to toggle.",
+    "_encoding_note": "Keep this file ASCII-only. FML 1.7.10 reads mcmod.info with the platform default charset (GBK on Chinese Windows), so non-ASCII text must be \\uXXXX-escaped. Lang files under assets/ are read as UTF-8 and are unaffected.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["\u5c0f\u672b"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "parent": "",
+    "dependencies": []
+}]

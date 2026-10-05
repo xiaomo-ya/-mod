@@ -1,0 +1,51 @@
+// Forge 1.7.10 自动疾跑 Mod —— ForgeGradle 1.2 工程
+// 需要的环境：JDK 8 + Gradle 2.14.x（详见 README.md）
+
+buildscript {
+    repositories {
+        mavenCentral()
+        // 老地址 http://files.minecraftforge.net/maven 已跳转，这里直接用新地址
+        maven { name = "forge"; url = "https://maven.minecraftforge.net/" }
+        // 国内可用的 Forge maven 镜像（可选，删掉也不影响）
+        maven { name = "bmclapi"; url = "https://bmclapi2.bangbang93.com/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'forge'
+
+version = "1.0.0"
+group = "com.example.autosprint"
+archivesBaseName = "AutoSprint-1.7.10"
+
+// 1.7.10 时代用 Java 7 字节码最通用；如果编译报错可以改成 '1.8'
+sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
+
+minecraft {
+    // 1.7.10 最后一个推荐版 Forge
+    version = "1.7.10-10.13.4.1614-1.7.10"
+    runDir = "run"
+}
+
+repositories {
+    mavenCentral()
+    maven { name = "forge"; url = "https://maven.minecraftforge.net/" }
+    maven { name = "bmclapi"; url = "https://bmclapi2.bangbang93.com/maven" }
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

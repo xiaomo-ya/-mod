@@ -1,0 +1,4 @@
+# Auto Sprint - 简体中文（本文件必须保存为 UTF-8 编码）
+key.autosprint.toggle=切换自动疾跑
+autosprint.msg.enabled=自动疾跑：已开启
+autosprint.msg.disabled=自动疾跑：已关闭
